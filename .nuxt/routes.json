@@ -1,0 +1,16 @@
+[
+  {
+    "name": "products",
+    "path": "/products",
+    "component": "/home/users/kartikey.dubey/www/html/bagisto-vsf/pages/products/index.vue",
+    "chunkName": "pages/products/index",
+    "_name": "_76c0e860"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/users/kartikey.dubey/www/html/bagisto-vsf/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2849da0e"
+  }
+]

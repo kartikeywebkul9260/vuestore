@@ -1,0 +1,15 @@
+{
+  "name": "@vue-storefront/bagisto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "@vue-storefront/core": "^2.6.0", 
+    "@vue-storefront/middleware": "^2.6.0",
+    "@nuxtjs/composition-api": "^0.33.0"
+  },
+  "peerDependencies": {
+    "@nuxt/types": "^2.15.8"
+  }
+}
+
