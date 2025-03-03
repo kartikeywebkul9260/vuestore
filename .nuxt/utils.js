@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"BAGISTO_API_URL":"http://localhost:8000/graphql","MIDDLEWARE_URL":"http://localhost:3000/api/"}
+      env: {"BAGISTO_API_URL":"http://localhost:8000/graphql","middlewareUrl":"http://localhost:8000/api/"}
     }
     // Only set once
 

@@ -1,6 +1,6 @@
 
 import { integrationPlugin } from '@vue-storefront/core';
-import { createApiClient } from '~/packages/bagisto/api-client/src';
+import { createApiClient } from '@/packages/bagisto/api-client/src';
 import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client/core';
 
 const bagistoPlugin = integrationPlugin(({ integration }) => {

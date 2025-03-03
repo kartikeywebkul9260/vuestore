@@ -2,27 +2,18 @@ export default {
   target: 'server',
   ssr: true,
 
-  plugins: [
-    '~/plugins/fix-i18n.js',
-  ],
-  
   env: {
     BAGISTO_API_URL: process.env.BAGISTO_API_URL || 'http://localhost:8000/graphql',
-    MIDDLEWARE_URL: 'http://localhost:3000/api/'
+    middlewareUrl: process.env.MIDDLEWARE_URL || 'http://localhost:8000/api/',
   },
 
   publicRuntimeConfig: {
-    middlewareUrl: 'http://localhost:3000/api/', // Set a dummy URL to avoid errors
-  },
-
-  publicRuntimeConfig: {
-    bagisto: {
-      apiUrl: process.env.BAGISTO_API_URL || 'http://localhost:8000/graphql'
-    }
+      apiUrl: process.env.BAGISTO_API_URL || 'http://localhost:8000/graphql',
+      middlewareUrl: process.env.MIDDLEWARE_URL || 'http://localhost:8000/api/',
   },
 
   privateRuntimeConfig: {
-    middlewareUrl: 'http://localhost:3000/api/', // Ensure it's available on the server
+    middlewareUrl: process.env.MIDDLEWARE_URL || 'http://localhost:8000/api/',
   },
 
   head: {
@@ -44,7 +35,6 @@ export default {
     '@nuxtjs/composition-api/module',
     '~/packages/bagisto',
   ],
-
 
   plugins: [
     '~/plugins/bagisto.js',
@@ -68,7 +58,7 @@ export default {
         location: '@vue-storefront/bagisto-api/server',
         configuration: {
           api: process.env.BAGISTO_API_URL || 'http://localhost:8000/graphql',
-          middlewareUrl: process.env.MIDDLEWARE_URL || 'http://localhost:3000/api/',
+          middlewareUrl: 'http://localhost:8000/api/', // Remove process.env and use direct string
         },
       },
     },
